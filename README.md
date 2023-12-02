@@ -7,31 +7,25 @@ We've organized the project into distinct layers to adhere to clean architecture
 
 ```
 /lib
-|-- business
-|   |-- entities
-|   |-- usecase
-|   |-- repository
-|-- data
-|   |-- model
-|   |-- datasource
-|   |-- repository
-|-- presentation
-|   |-- page
-|   |-- provider
-|   |-- widget
+|-- core
+    |-- connection: Contains code related to connection management.
+    |-- params
+        |-- errors: Definitions for error handling.
+        |-- params: Additional parameters and configurations.
+|-- feature
+    |-- feature1
+        |-- business: Logic specific to 'feature1'.
+            |-- entities: Definitions of core business entities.
+            |-- usecase: Implementation of use cases or business logic.
+            |-- repository: Interfaces or abstract classes for data access.
+        |-- data: Data-related concerns for 'feature1'.
+            |-- model: Data models or DTOs (Data Transfer Objects).
+            |-- datasource: Classes responsible for fetching data.
+            |-- repository: Concrete implementations of data repositories.
+        |-- presentation: UI and user interaction for 'feature1'.
+            |-- page: Flutter pages or screens.
+            |-- provider: State management providers.
+            |-- widget: Reusable UI components.
+
+
 ```
-
-- **business**: Contains entities, use cases, and repositories related to your business logic.
-  - **entities**: Definitions of core business entities.
-  - **usecase**: Implementation of use cases or business logic.
-  - **repository**: Interfaces or abstract classes for data access.
-
-- **data**: Deals with data-related concerns such as models, data sources, and repositories.
-  - **model**: Data models or DTOs (Data Transfer Objects).
-  - **datasource**: Classes responsible for fetching data from different sources (APIs, databases, etc.).
-  - **repository**: Concrete implementations of data repositories.
-
-- **presentation**: Focuses on the UI and user interaction.
-  - **page**: Flutter pages or screens.
-  - **provider**: State management providers.
-  - **widget**: Reusable UI components.
