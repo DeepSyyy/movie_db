@@ -20,7 +20,7 @@ class MovieModelRemoteDataSourceImpl implements MovieRemoteDataSource {
     final response = await dio.get(
       'http://www.omdbapi.com/',
       queryParameters: {
-        'apikey': 'ur api key',
+        'apikey': 'api key',
         'i': params.id,
       },
     );

@@ -5,7 +5,8 @@ import 'package:movie_db/features/search/presentation/provider/movie_search_prov
 import 'package:provider/provider.dart';
 
 class DataSearchWidget extends StatelessWidget {
-  const DataSearchWidget({super.key});
+  DataSearchWidget({super.key, required this.controller});
+  TextEditingController controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

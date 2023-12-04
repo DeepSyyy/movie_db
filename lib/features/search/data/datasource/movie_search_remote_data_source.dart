@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:movie_db/core/params/params.dart';
 import 'package:movie_db/features/search/data/model/movie_searc_model.dart';
 
@@ -17,7 +18,7 @@ class MovieSearchModelRemoteDataSourceImpl
     final response = await dio.get(
       'http://www.omdbapi.com/',
       queryParameters: {
-        'apikey': 'ur api key',
+        'apikey': 'api key',
         's': query.query,
       },
     );
